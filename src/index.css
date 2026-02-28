@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Montserrat", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Cormorant Garamond", serif;
+
+  --color-brand-50: #F5F2ED;
+  --color-brand-100: #EBE6DE;
+  --color-brand-200: #DED6C9;
+  --color-brand-800: #2D2D2D;
+  --color-brand-900: #1A1A1A;
+  --color-brand-accent: #C5A059;
+  --color-brand-accent-dim: #FDF8F0;
+}
+
+@layer base {
+  body {
+    @apply bg-brand-50 text-brand-900 antialiased;
+  }
+}
+
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+@keyframes voiceWave {
+  0%, 100% { height: 10px; opacity: 0.4; }
+  50% { height: 30px; opacity: 1; }
+}
+
+.animate-voice-wave {
+  animation: voiceWave 1s ease-in-out infinite;
+}
+
+/* Luxury Masks and Shapes */
+.oval-mask {
+  clip-path: ellipse(50% 50% at 50% 50%);
+}
+
+.vertical-text {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+}
+
+.markdown-body p {
+  @apply mb-4;
+}
+
+.markdown-body p:last-child {
+  @apply mb-0;
+}

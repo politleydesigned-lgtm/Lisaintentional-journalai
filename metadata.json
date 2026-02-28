@@ -1,0 +1,5 @@
+{
+  "name": "Spark & Sync",
+  "description": "An elite relationship diagnostic and AI-powered reconnection platform.",
+  "requestFramePermissions": ["microphone"]
+}
